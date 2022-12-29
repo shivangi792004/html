@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="rabba.css" />
+  </head>
+  <body>
+    <script>
+      function add() {
+        let no1 = parseInt(document.getElementById("bt1").value);
+        let no2 = parseInt(document.getElementById("bt2").value);
+        if (no1 == "" || no2 == "" || isNaN(no1) || isNaN(no2)) {
+          alert("please ensure that valid data is inserted in both");
+        } else {
+          let no3 = no1 + no2;
+          myform.bt3.value = no3;
+        }
+      }
+      function mult() {
+        let no1 = parseInt(document.getElementById("bt1").value);
+        let no2 = parseInt(document.getElementById("bt2").value);
+        if (no1 == "" || no2 == "" || isNaN(no1) || isNaN(no2)) {
+          alert("please ensure that valid data is inserted in both");
+        } else {
+          let no3 = no1 * no2;
+          myform.bt3.value = no3;
+        }
+      }
+      function div() {
+        let no1 = parseInt(document.getElementById("bt1").value);
+        let no2 = parseInt(document.getElementById("bt2").value);
+        if (no1 == "" || no2 == "" || isNaN(no1) || isNaN(no2)) {
+          alert("please ensure that valid data is inserted in both");
+        } else {
+          let no3 = no1 / no2;
+          myform.bt3.value = no3;
+        }
+      }
+
+      function sub() {
+        let no1 = parseInt(document.getElementById("bt1").value);
+        let no2 = parseInt(document.getElementById("bt2").value);
+        if (no1 == "" || no2 == "" || isNaN(no1) || isNaN(no2)) {
+          alert("please ensure that valid data is inserted in both");
+        } else {
+          let no3 = no1 - no2;
+          myform.bt3.value = no3;
+        }
+      }
+    </script>
+    <div id="border">
+      <form id="myform">
+        <input
+          type="text"
+          id="bt1"
+          placeholder="enter first number"
+        /><br /><br />
+        <input
+          type="text"
+          id="bt2"
+          placeholder="enter second value"
+        /><br /><br />
+        <input type="text" id="bt3" placeholder="result" /><br /><br />
+        <input
+          type="button"
+          value="add"
+          onclick="add()"
+          placeholder="enter second value"
+        />&nbsp;&nbsp;<input
+          type="button"
+          value="multiple"
+          onclick="mult()"
+          placeholder="enter second value"
+        />&nbsp;&nbsp;<input
+          type="button"
+          value="divide"
+          onclick="div()"
+          placeholder="enter second value"
+        /><br />
+        <input
+          type="button"
+          value="substract"
+          onclick="sub()"
+          placeholder="enter second value"
+        />&nbsp;&nbsp;
+        <input type="reset" value="reset/" />
+      </form>
+    </div>
+  </body>
+</html>
